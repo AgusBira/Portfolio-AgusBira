@@ -10,6 +10,7 @@ import { useEffect,useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
+import ContactForm from '../ContactForm.jsx/ContactForm';
 
 const righteous = Righteous({
   weight: '400',
@@ -54,7 +55,7 @@ export default function MainContainer() {
       {data.map((proy, index) => <ProyectCard key={index} name={proy.name} description={proy.description} img={proy.img}/>)}
       <Line/>
       <h2 className={`${righteous.className} text-4xl`}>Contacto</h2>
-      <section>
+      <section className='flex'>
         <article className='flex flex-col gap-10 w-[398px]'>
           <div className='flex flex-col gap-3'>
             <h2 className='text-[#5CFD38] font-bold text-3xl'>Dejame un mensaje!</h2>
@@ -69,6 +70,7 @@ export default function MainContainer() {
             <a href="">agusbira398@gmail.com</a>
           </div>
           </article>
+          <ContactForm/>
       </section>
       </section>
   )
