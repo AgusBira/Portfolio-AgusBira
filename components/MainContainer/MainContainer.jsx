@@ -4,7 +4,7 @@ import ButtonComponent from '../ButtonComponent'
 import Line from "../line"
 import { Righteous } from 'next/font/google';
 import Image from 'next/image';
-import { data } from '../../../../data/data';
+import { data } from '../../data/data';
 import ProyectCard from '../ProyectCard/ProyectCard';
 import { useEffect,useRef } from 'react';
 import AOS from 'aos';
@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import ContactForm from '../ContactForm.jsx/ContactForm';
 
-const righteous = Righteous({
+export const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
