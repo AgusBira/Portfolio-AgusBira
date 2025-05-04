@@ -11,6 +11,7 @@ export default function SobreMi() {
     <>
     <h2 className={`${righteous.className} text-7xl m-10 text-center`}>Estudios</h2>
     <SobreMiContainer/>
+    <h2>Experiencia</h2>
     </>
   )
 }
