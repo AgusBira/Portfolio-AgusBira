@@ -13,7 +13,7 @@ export default function page() {
   return (
     <div>
         <h2 className={`${righteous.className} text-7xl m-10 text-center`}>{params.id}</h2>
-        <SobreMiContainer/>
+        <SobreMiContainer slug={params.id} />
     </div>
   )
 }
