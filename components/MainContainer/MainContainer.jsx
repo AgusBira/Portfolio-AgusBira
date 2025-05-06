@@ -11,6 +11,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import ContactForm from '../ContactForm.jsx/ContactForm';
+import Carrousel from '../carrousel/Carrousel';
 
 export const righteous = Righteous({
   weight: '400',
@@ -29,7 +30,7 @@ export default function MainContainer() {
   }, [])
 
   return (
-    <section className='flex flex-col items-center gap-10 m-10'>
+    <section className='flex flex-col items-center gap-10 m-10 w-[1280px]'>
       <div>
         <div className='flex gap-5 items-center'>
           <h3 className='text-3xl opacity-50'>{text}<Cursor/></h3>
@@ -40,14 +41,15 @@ export default function MainContainer() {
          <h1 data-aos="fade-up" className={`text-8xl flex flex-col gap-4 ${righteous.className}`}>Front End <span className='block'>Developer</span> </h1> 
 
       </div>
-      <ButtonComponent props={"Proyectos"} />
+      <ButtonComponent props={"Proyectos"} link={"proyectos"} />
+      <Carrousel/>
       <Line />
       <section className='flex justify-center items-center gap-10'>
         <Image data-aos="flip-left" src={"/images/fotoagusbira.png"} width={419} height={431} alt='Linea de separacion' />
         <div className='flex flex-col items-center gap-5'>
           <h3 className='text-4xl font-bold'>Hola!! 👋</h3>
           <p className='w-[552px] text-3xl'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
-          <ButtonComponent props={"Contacto"}/>
+          <ButtonComponent props={"Contacto"} link={"contacto"}/>
         </div>
       </section>    
       <Line/>

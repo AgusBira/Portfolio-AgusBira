@@ -6,14 +6,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        
-        <div className="bg-gradient-to-b from-[#252424] via-[#0A2003] to-[#0B6329] h-full ">
+   
+
+        <div>
             <SobreMiNav/>
             {children}
         </div>
-      </body>
-    </html>
+
   );
 }
