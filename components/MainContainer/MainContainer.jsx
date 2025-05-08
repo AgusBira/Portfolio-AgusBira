@@ -48,7 +48,7 @@ export default function MainContainer() {
           </div>
         </h1>
       </div>
-      <ButtonComponent props={"proyectos"} link={"#proyectos"} />
+      <ButtonComponent props={"Proyectos"} link={"#proyectos"} />
       <Carrousel/>
       <Line />
       <section className='flex justify-center items-center gap-10'>
@@ -56,7 +56,7 @@ export default function MainContainer() {
         <div className='flex flex-col items-center gap-5'>
           <h3 className='text-4xl font-bold'>Hola!! 👋</h3>
           <p className='w-[552px] text-2xl opacity-90'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
-          <ButtonComponent props={"contacto"} link={"#contacto"}/>
+          <ButtonComponent props={"Contacto"} link={"#contacto"}/>
         </div>
       </section>    
       <Line/>
