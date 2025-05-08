@@ -46,7 +46,7 @@ export const timelineExp = [
         title: "SwaplyAr",
         location: "Ciudad Autonoma de Buenos Aires",
         description: "Actualmente me desempeño como Front-End Developer en SwaplyAr, donde contribuyo al desarrollo y optimización de interfaces de usuario modernas y eficientes. Trabajo con Next.js, TypeScript y Tailwind CSS para crear experiencias interactivas y responsivas, asegurando un rendimiento óptimo y una experiencia fluida para los usuarios. Durante mi pasantía, he mejorado mis habilidades en desarrollo web, buenas prácticas de codificación y trabajo en equipo dentro de un entorno ágil.",
-        date:"Marzo 2025 - Actualidad",
+        date: "Marzo 2025 - Actualidad",
         icon: "code"
     },
 
@@ -55,21 +55,74 @@ export const timelineExp = [
 
 export const skillsData = [
     {
-        id:1,
+        id: 1,
         title: "Lenguajes",
-        images: ["/images/typescript.png","/images/js.png","/images/python.png","/images/html.png","/images/css.png"]
+        images: [
+            {
+                url: "/images/typescript.png",
+                name: "Typescript",
+
+            },
+            {
+                url: "/images/js.png",
+                name: "JavaScript",
+
+            },
+            {
+                url: "/images/python.png",
+                name: "Python",
+
+            },
+            {
+                url: "/images/html.png",
+                name: "HTML5",
+
+            },
+            {
+                url: "/images/css.png",
+                name: "CSS3",
+
+            }, , ,
+        ]
 
     },
     {
-        id:2,
+        id: 2,
         title: "Frameworks y librerias",
-        images: ["/images/react.png","/images/nextjs.png","/images/tailwind.png"]
+        
+        images: [
+            {
+                url: "/images/react.png",
+                name: "React Js",
+    
+            },
+            {
+                url: "/images/nextjs.png",
+                name: "Next Js",
+    
+            },
+            {
+                url: "/images/tailwind.png",
+                name: "Taiwlind CSS",
+    
+            },
+        ]
 
     },
     {
-        id:3,
+        id: 3,
         title: "Herramientas",
-        images: ["/images/vs.png","/images/figma.png"]
+        images: [ 
+        {
+            url:"/images/vs.png",
+            name: "VS Code",
+
+        },
+        {
+            url: "/images/figma.png",
+            name: "Figma",
+
+        },]
 
     }
 ]
