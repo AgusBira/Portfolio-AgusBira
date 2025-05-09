@@ -14,14 +14,14 @@ export default function TimeLineStudies() {
           const icon = item.icon === "sound" ? 
           <Image 
           src={"/images/auriculares-redondos.svg"}
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt='Icono'
           /> : 
           <Image 
           src={"/images/destello.svg"}
-          width={40}
-          height={40}
+          width={30}
+          height={30}
           alt='Icono'
           />
           return(
@@ -43,23 +43,32 @@ export default function TimeLineStudies() {
                   }
                 }
                 iconStyle={{
-                  background: '#5CFD38',
+                  background: '#7F22FE',
                   color: 'black',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}
-                icon={item.icon === "code" ?  (<Image src={"/images/codigo.svg"} width={40} height={40} alt='icono' />) : icon }
+                icon={item.icon === "code" ?  (<Image src={"/images/codigo.svg"} width={30} height={30} alt='icono' />) : icon }
               >
                 <h3 className="text-3xl">{item.title}</h3>
                 <h4 className='vertical-timeline-element-subtitle'>{item.location}</h4>
                 <p id='description'>{item.description}</p>
+                <div style={{ marginTop: "10px", display: "flex", flexWrap: "wrap", gap: "5px" }}>
+                {item.tecno && item.tecno.map((tecno, index) => (
+                  <div key={index} className="bg-gradient-to-b from-blue-600 to-violet-600 p-[2px] rounded-xl">
+                    <div className='bg-[#252424] p-2 rounded-xl'>
+                      <span>{tecno}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
               </VerticalTimelineElement>
             )
         } )}
          <VerticalTimelineElement
           iconStyle={{
-            background: '#5CFD38',
+            background: '#7F22FE',
             color: '#fff',
             display: 'flex',
             alignItems: 'center',
@@ -68,8 +77,8 @@ export default function TimeLineStudies() {
           icon={
             <Image 
               src={"/images/cohete.svg"} // Puedes usar cualquier icono que prefieras
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               alt='Fin de la línea de tiempo'
             />
           }

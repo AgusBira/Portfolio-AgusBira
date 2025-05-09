@@ -52,7 +52,7 @@ export default function MainContainer() {
           <DisponibleParaTrabajar />
         </div>
 
-        <h1 className={`text-8xl flex flex-col gap-4 h-[200px] ${righteous.className}`}>
+        <h1 className={` flex flex-col gap-4 text-7xl h-[150px] lg:text-8xl lg:h-[200px] ${righteous.className}`}>
           <div className='flex flex-col'>
             {text.split('\n').map((line, i) => (
               <span key={i}>
@@ -66,21 +66,23 @@ export default function MainContainer() {
       <ButtonComponent props={"Proyectos"} link={"#proyectos"} />
       <Carrousel/>
       <Line />
-      <section className='flex justify-center items-center gap-10'>
-        <Image data-aos="flip-left" src={"/images/fotoagusbira.png"} width={419} height={431} alt='Linea de separacion' />
+      <section className='flex flex-col lg:flex-row justify-center items-center gap-10'>
+        <Image  data-aos="flip-left" src={"/images/fotoagusbira.png"} width={419} height={431} alt='Linea de separacion' />
         <div className='flex flex-col items-center gap-5'>
           <h3 className='text-4xl font-bold'>Hola!! 👋</h3>
-          <p className='w-[552px] text-2xl opacity-90'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
+          <p className=' w-[300px] text-center text-2xl opacity-90 lg:text-start lg:w-[552px]'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
           <ButtonComponent props={"Contacto"} link={"#contacto"}/>
         </div>
       </section>    
       <Line/>
-      <h2 className={`${righteous.className} text-4xl`} id='proyectos'>Proyectos</h2>
-      {data.map((proy, index) => <ProyectCard key={index} name={proy.name} description={proy.description} img={proy.img} slug={proy.slug}/>)}
+      <section className='flex flex-col items-center gap-10'>
+        <h2 className={`${righteous.className} text-4xl`} id='proyectos'>Proyectos</h2>
+        {data.map((proy, index) => <ProyectCard key={index} name={proy.name} description={proy.description} img={proy.img} slug={proy.slug}/>)}
+      </section>
       <Line/>
       <h2 className={`${righteous.className} text-4xl`}>Contacto</h2>
-      <section className='flex' id='contacto'>
-        <article className='flex flex-col gap-10 w-[398px]'>
+      <section className='flex flex-col items-center lg:flex-row' id='contacto'>
+        <article className='flex flex-col gap-10 p-10 w-[398px]'>
           <div className='flex flex-col gap-3'>
             <h2 className=' font-bold text-3xl '>Dejame un <span className='font-semibold text-violet-400'>mensaje!</span></h2>
             <p>Si queres comunicarte conmigo te invito a que me envies un mensaje asi charlamos</p>

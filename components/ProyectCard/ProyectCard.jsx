@@ -10,15 +10,15 @@ export default function ProyectCard({name , description , img,slug}) {
     AOS.init({})
   },[])
   return (
-    <section data-aos="fade-left" className='flex gap-10'>
-        <div className='flex flex-col gap-10'>
-            <h3 className='text-violet-300 font-bold text-3xl'>{name}</h3>
-            <p className='w-[416px] text-xl opacity-80'>{description}</p>
+    <section data-aos="fade-left" className='flex flex-col items-center lg:flex-row gap-10'>
+        <div className='flex flex-col items-center gap-10'>
+            <h3 className='text-center text-violet-300 font-bold text-3xl lg:text-start'>{name}</h3>
+            <p className='w-[300px]  text-center lg:text-start lg:w-[416px] text-xl opacity-80'>{description}</p>
             <div className='w-full flex justify-center'>
               <VerMas slug={`/${slug}`}/>
             </div>
         </div>
-        <Image  src={img} width={432} height={265} alt='Imagen del Proyecto' />
+        <Image  src={img} width={400} height={265} alt='Imagen del Proyecto' />
         
     </section>
   )

@@ -21,7 +21,8 @@ export const timelineEstudios = [
         location: "Facultad de Ingenieria UBA",
         description: "Realicé los cursos de Introducción a la Programación y Python Inicial, donde adquirí fundamentos esenciales de lógica algorítmica, sintaxis básica y estructuras de datos en Python. Motivado por seguir ampliando mis habilidades en programación y tecnologías relacionadas.",
         date: "Marzo 2023 - Actualidad",
-        icon: "code"
+        icon: "code",
+        tecno: ["Python" , "HTML" , "CSS", "JavaScript"] 
     },
     {
         id: 4,
@@ -29,7 +30,8 @@ export const timelineEstudios = [
         location: "Coderhouse",
         description: "Especialización en la creación de aplicaciones web completas. Domino tecnologías como HTML5, CSS3, JavaScript, React, Node.js, Express y bases de datos SQL/NoSQL. Experiencia en el desarrollo de interfaces dinámicas, APIs RESTful y soluciones escalables, aplicando buenas prácticas de código, performance y experiencia de usuario. Con habilidades para trabajar en equipo bajo metodologías ágiles y comprometido con el aprendizaje continuo en el desarrollo de software.",
         date: "Julio 2024 - Actualidad",
-        icon: "code"
+        icon: "code",
+        tecno: [ "HTML" , "CSS", "JavaScript", "React", "Node.js", "Express"] 
     }
 ]
 export const timelineExp = [
@@ -47,7 +49,8 @@ export const timelineExp = [
         location: "Ciudad Autonoma de Buenos Aires",
         description: "Actualmente me desempeño como Front-End Developer en SwaplyAr, donde contribuyo al desarrollo y optimización de interfaces de usuario modernas y eficientes. Trabajo con Next.js, TypeScript y Tailwind CSS para crear experiencias interactivas y responsivas, asegurando un rendimiento óptimo y una experiencia fluida para los usuarios. Durante mi pasantía, he mejorado mis habilidades en desarrollo web, buenas prácticas de codificación y trabajo en equipo dentro de un entorno ágil.",
         date: "Marzo 2025 - Actualidad",
-        icon: "code"
+        icon: "code",
+        tecno: [ "HTML" , "CSS", "TypeScript", "React","Nextjs", "Taiwlind CSS"] 
     },
 
 
