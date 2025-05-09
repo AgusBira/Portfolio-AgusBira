@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html>
       <body>
         <div className="bg-gradient-to-b from-[#252424] via-[#0A2003] to-[#0B6329] h-full">
           <NavBar/>

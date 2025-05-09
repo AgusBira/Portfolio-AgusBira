@@ -6,29 +6,44 @@ import { Righteous } from 'next/font/google';
 import Image from 'next/image';
 import { data } from '../../data/data';
 import ProyectCard from '../ProyectCard/ProyectCard';
-import { useEffect,useRef } from 'react';
+import { useEffect,useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import ContactForm from '../ContactForm.jsx/ContactForm';
 import Carrousel from '../carrousel/Carrousel';
-
+import dynamic from 'next/dynamic';
 export const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
 });
 export default function MainContainer() {
+
+  const [isClient, setIsClient] = useState(false);
   const [text] = useTypewriter({
     words: ["Agustin\nBirarelli", "Front End\ndeveloper"], // Usa \n para separar líneas
     typeSpeed: 20,
     loop: true
   })
 
-  useEffect(() => {
-    AOS.init({})
-  }, [])
 
+
+  useEffect(() => {
+    setIsClient(true);
+    if (typeof window !== 'undefined') {
+      AOS.init({ once: true });
+    }
+  }, []);
+
+  if (!isClient) {
+    return (
+
+      <section className='flex flex-col items-center gap-10 m-10 w-[1280px]'>
+        Cargando...
+      </section>
+    );
+  }
   return (
     <section className='flex flex-col items-center gap-10 m-10 w-[1280px]'>
     <div>
@@ -61,17 +76,17 @@ export default function MainContainer() {
       </section>    
       <Line/>
       <h2 className={`${righteous.className} text-4xl`} id='proyectos'>Proyectos</h2>
-      {data.map((proy, index) => <ProyectCard key={index} name={proy.name} description={proy.description} img={proy.img}/>)}
+      {data.map((proy, index) => <ProyectCard key={index} name={proy.name} description={proy.description} img={proy.img} slug={proy.slug}/>)}
       <Line/>
       <h2 className={`${righteous.className} text-4xl`}>Contacto</h2>
       <section className='flex' id='contacto'>
         <article className='flex flex-col gap-10 w-[398px]'>
           <div className='flex flex-col gap-3'>
-            <h2 className='text-[#5CFD38] font-bold text-3xl'>Dejame un mensaje!</h2>
+            <h2 className=' font-bold text-3xl '>Dejame un <span className='font-semibold text-violet-400'>mensaje!</span></h2>
             <p>Si queres comunicarte conmigo te invito a que me envies un mensaje asi charlamos</p>
           </div>
           <div className='flex items-center gap-5'>
-            <Image src={"/images/iconotelefono1.png"} width={52} height={52} alt='icono de contacto'/>
+            <Image  src={"/images/iconotelefono1.png"} width={52} height={52} alt='icono de contacto'/>
             <a href="">+54 1122608199</a>
           </div>
           <div className='flex items-center gap-5'>
@@ -79,7 +94,7 @@ export default function MainContainer() {
             <a href="">agusbira398@gmail.com</a>
           </div>
           </article>
-          <ContactForm/>
+          <ContactForm data-aos="flip-left"/>
       </section>
       </section>
   )
