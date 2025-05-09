@@ -1,7 +1,7 @@
 "use client"
 import DisponibleParaTrabajar from './DisponibleParaTrabajar'
 import ButtonComponent from '../ButtonComponent'
-import Line from "../line"
+import Line from "../Line"
 import { Righteous } from 'next/font/google';
 import Image from 'next/image';
 import { data } from '../../data/data';
@@ -12,7 +12,6 @@ import 'aos/dist/aos.css';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import ContactForm from '../ContactForm.jsx/ContactForm';
 import Carrousel from '../carrousel/Carrousel';
-import dynamic from 'next/dynamic';
 export const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
