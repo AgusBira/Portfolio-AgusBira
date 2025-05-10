@@ -16,13 +16,13 @@ export default function TimeLineStudies() {
         {timelineEstudios.map((item) => {
           const icon = item.icon === "sound" ?
             <Image
-              src={"/images/auriculares-redondos.svg"}
+              src={"/images/auriculares-redondos.png"}
               width={30}
               height={30}
               alt='Icono'
             /> :
             <Image
-              src={"/images/destello.svg"}
+              src={"/images/destello.png"}
               width={30}
               height={30}
               alt='Icono'
@@ -52,7 +52,7 @@ export default function TimeLineStudies() {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
-              icon={item.icon === "code" ? (<Image src={"/images/codigo.svg"} width={30} height={30} alt='icono' />) : icon}
+              icon={item.icon === "code" ? (<Image src={"/images/codigo.png"} width={30} height={30} alt='icono' />) : icon}
             >
               <h3 className="text-3xl">{item.title}</h3>
               <h4 className='vertical-timeline-element-subtitle'>{item.location}</h4>
@@ -79,7 +79,7 @@ export default function TimeLineStudies() {
           }}
           icon={
             <Image
-              src={"/images/cohete.svg"} // Puedes usar cualquier icono que prefieras
+              src={"/images/cohete.png"} // Puedes usar cualquier icono que prefieras
               width={30}
               height={30}
               alt='Fin de la línea de tiempo'

@@ -61,8 +61,8 @@ export default function SkillsContainer() {
                 key={image.name} // Usa un identificador único de la imagen
                 variants={itemVariants}
                 whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                whileTap={{ scale: 0.99 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 5 }}
               >
                 <SkillCard 
                   info={image} 
