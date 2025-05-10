@@ -16,7 +16,27 @@ export const data = [
                 url: ""
             }
         ],
-        longDescription:""
+        longDescription:[
+             
+            {
+                text:"📌 Descripción General",
+                style:"subtitle"
+            }, 
+
+            {
+                text:"Coliseum es E-Commerce de Videojuegos es una tienda en línea desarrollada con React.js, diseñada para ofrecer una experiencia fluida y dinámica en la compra de videojuegos.",
+                style:"normal"
+            } ,
+            {
+                text:"Sus principales características incluyen:",
+                style:"normal"
+            },
+            {
+                text:["Agregar productos al carrito.","Ver detalles de cada producto (imágenes, descripción, precio, etc.).","Gestionar el carrito (aumentar/disminuir cantidad, eliminar items).","Proceder al checkout con un formulario para finalizar la compra."],
+                style:"ul"
+            }
+
+        ]
     },
     {
         name: "Portfolio Personal",
@@ -35,6 +55,6 @@ export const data = [
                 url: ""
             }
         ],
-        longDescription: "",
+        longDescription: [],
     }
 ]
