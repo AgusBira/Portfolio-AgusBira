@@ -46,12 +46,12 @@ export default function MainContainer() {
   return (
   <section className="flex flex-col items-center gap-10 m-10 w-full max-w-[1280px] overflow-x-hidden">
     <div>
-        <div className='flex gap-5 items-center'>
+        <div className='flex justify-center gap-5 items-center'>
           <h3 className='text-3xl opacity-50'>I'am</h3>
           <DisponibleParaTrabajar />
         </div>
 
-        <h1 className={` flex flex-col gap-4 text-7xl h-[150px] lg:text-8xl lg:h-[200px] ${righteous.className}`}>
+        <h1 className={` flex flex-col gap-4 text-6xl  text-center h-[120px] w-screen lg:text-8xl lg:h-[200px] ${righteous.className}`}>
           <div className='flex flex-col'>
             {text.split('\n').map((line, i) => (
               <span key={i}>
