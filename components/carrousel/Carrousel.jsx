@@ -16,7 +16,7 @@ export default function Carrousel() {
         "/images/css.png",
     ]
 
-    const FAST_DURATION = 25
+    const FAST_DURATION = 40
     const SLOW_DURATION = 75
 
     const [duration, setDuration] = useState(FAST_DURATION)
@@ -60,7 +60,7 @@ export default function Carrousel() {
     return (
         <section className='py-8 overflow-hidden'>
             <motion.div 
-                className='left-0 flex gap-10 w-screen clas' 
+                className='left-0 flex gap-10 w-[400px]  lg:w-screen clas' 
                 ref={ref} 
                 style={{ x: xTranslation }}
                 onHoverStart={() => {

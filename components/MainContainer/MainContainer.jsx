@@ -44,7 +44,7 @@ export default function MainContainer() {
     );
   }
   return (
-    <section className='flex flex-col items-center gap-10 m-10 w-[1280px]'>
+    <section className='flex flex-col items-center gap-10 m-10 w-full max-w-[1280px]'>
     <div>
         <div className='flex gap-5 items-center'>
           <h3 className='text-3xl opacity-50'>I'am</h3>
@@ -65,8 +65,8 @@ export default function MainContainer() {
       <ButtonComponent props={"Proyectos"} link={"#proyectos"} />
       <Carrousel/>
       <Line />
-      <section className='flex flex-col lg:flex-row justify-center items-center gap-10'>
-        <Image  data-aos="flip-left" src={"/images/fotoagusbira.png"} width={419} height={431} alt='Linea de separacion' />
+      <section className='flex flex-col lg:flex-row justify-center gap-15 items-center '>
+        <Image  data-aos="flip-left" src={"/images/fotoagusbira.png"} width={window.innerWidth < 640  ? 300 : 419} height={431} alt='Linea de separacion' />
         <div className='flex flex-col items-center gap-5'>
           <h3 className='text-4xl font-bold'>Hola!! 👋</h3>
           <p className=' w-[300px] text-center text-2xl opacity-90 lg:text-start lg:w-[552px]'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
