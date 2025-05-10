@@ -60,7 +60,7 @@ export default function Carrousel() {
     return (
         <section className='py-8 overflow-hidden'>
             <motion.div 
-                className='left-0 flex gap-10 w-[400px]  lg:w-[1200px] clas' 
+                className='left-0 flex gap-10 w-screen clas' 
                 ref={ref} 
                 style={{ x: xTranslation }}
                 onHoverStart={() => {
