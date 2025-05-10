@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <div className="bg-gradient-to-b from-[#252424] via-[#0A2003] to-[#0B6329] h-full">
+        <div className="bg-gradient-to-b from-[#252424] via-[#0A2003] to-[#0B6329] h-full w-screen">
           <NavBar/>
           {children}
           <Footer/>
