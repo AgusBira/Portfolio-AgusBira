@@ -44,7 +44,7 @@ export default function MainContainer() {
     );
   }
   return (
-    <section className='flex flex-col items-center gap-10 m-10 w-full max-w-[1280px]'>
+  <section className="flex flex-col items-center gap-10 m-10 w-full max-w-[1280px] overflow-x-hidden">
     <div>
         <div className='flex gap-5 items-center'>
           <h3 className='text-3xl opacity-50'>I'am</h3>
