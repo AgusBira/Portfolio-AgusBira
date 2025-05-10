@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 export default function TimeLineStudies() {
   return (
-    <section>
+    <section className='overflow-x-hidden'>
       <VerticalTimeline>
         {timelineEstudios.map((item) => {
           const icon = item.icon === "sound" ?
