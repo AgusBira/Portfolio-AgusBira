@@ -5,15 +5,20 @@ export const data = [
         img: "/images/colisumproyect.png",
         slug: "coliseum",
         tecnologies: ["React.js", "CSS3", "Firebase", "Context API"],
-        images:[],
+        images:["/images/imagenesColiseum/imagen1.png",
+        "/images/imagenesColiseum/imagen2.png",
+        "/images/imagenesColiseum/imagen3.png",
+        "/images/imagenesColiseum/imagen4.png",],
         links: [
             {
                 name: "Demo",
-                url: "https://coliseum-ecommerce.vercel.app/"
+                url: "https://coliseum-mu.vercel.app",
+                img:"/images/iconocoliseum.png"
             },
             {
                 name: "Github",
-                url: ""
+                url: "https://github.com/AgusBira/E-CommerceVideojuegos",
+                img:"/images/github-mark-white.png"
             }
         ],
         longDescription:[
