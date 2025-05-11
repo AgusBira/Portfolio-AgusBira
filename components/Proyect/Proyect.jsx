@@ -22,9 +22,9 @@ export default function Proyect() {
   }, [])
   console.log(proyecto.links)
   return (
-    <section className='m-5 flex justify-center items-center gap-10 text-white  min-h-screen'>
+    <section className='m-5 flex flex-col lg:flex-row justify-center items-center gap-10 text-white  min-h-screen'>
       <article>
-        <h1 className={`${righteous.className} text-6xl `}>{proyecto.name}</h1>
+        <h1 className={`${righteous.className} text-5xl p-3 text-center lg:text-start lg:text-6xl `}>{proyecto.name}</h1>
         <div className='m-10 lg:max-w-[500px]'>
           {
             Array.isArray(proyecto.longDescription) && proyecto.longDescription.map((item, index) => {
