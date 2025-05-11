@@ -24,7 +24,7 @@ export const data = [
         longDescription:[
              
             {
-                text:"📌 Descripción General",
+                text:"Descripción General",
                 style:"subtitle"
             }, 
 
@@ -49,17 +49,39 @@ export const data = [
         img:"/images/portfolioproyect.png",
         slug: "portfolio",
         tecnologies: ["Next.js","React.js" ,"Tailwind CSS", "Framer Motion"],
-        images:[],
+        images:["/images/imagenesProyecto2/imagen1.png",
+        "/images/imagenesProyecto2/imagen2.png",
+        "/images/imagenesProyecto2/imagen3.png",],
         links: [
             {
                 name: "Demo",
-                url: "https://coliseum-ecommerce.vercel.app/"
+                url: "https://portfolio-agus-bira.vercel.app",
+                img:"/images/portafolio-profesional.png"
             },
             {
                 name: "Github",
-                url: ""
+                url: "https://github.com/AgusBira/Portfolio-AgusBira",
+                img:"/images/github-mark-white.png"
             }
         ],
-        longDescription: [],
+        longDescription: [
+            {
+                text:"Descripción General",
+                style:"subtitle"
+            }, 
+
+            {
+                text:"Este portfolio es una aplicación web moderna y responsive, construida con Next.js, React.js y Tailwind CSS, diseñada para mostrar proyectos, habilidades y experiencia de manera elegante y eficiente.",
+                style:"normal"
+            } ,
+            {
+                text:"Características clave:",
+                style:"normal"
+            },
+            {
+                text:[" Rendimiento optimizado: Gracias a Next.js, el sitio tiene carga rápida, pre-renderizado y SEO mejorado."," Diseño responsive: Adaptable a cualquier dispositivo, utilizando Tailwind CSS para un desarrollo ágil y estilos consistentes.","Interacciones fluidas: Efectos animados y transiciones suaves para mejorar la experiencia del usuario.","Estructura modular: Componentes reutilizables en React para un código mantenible y escalable."],
+                style:"ul"
+            }
+        ],
     }
 ]

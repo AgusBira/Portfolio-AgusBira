@@ -11,8 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-
+import Line from '../Line'
 export default function Proyect() {
 
   const { proyect } = useParams()
@@ -31,17 +30,20 @@ export default function Proyect() {
             Array.isArray(proyecto.longDescription) && proyecto.longDescription.map((item, index) => {
               if (item.style === "normal") {
                 return (
-                  <p key={index} className='text-2xl my-5'>{item.text}</p>
+
+                    <p key={index} className='text-2xl my-5'>{item.text}</p>
+
+                  
                 )
               } else if (item.style === "subtitle") {
                 return (
-                  <h2 key={index} className='text-4xl'>{item.text}</h2>
+                  <h2 key={index} className='text-4xl font-semibold'>{item.text}</h2>
                 )
               } else if (item.style === "ul") {
                 return (
                   <ul className='list-disc list-inside my-5 text-xl' key={index}>
                     {Array.isArray(item.text) && item?.text.map((li, index) => {
-                      return (<li key={index}>{li}</li>)
+                      return (<li className='pl-5' key={index}>{li}</li>)
                     })}
                   </ul>)
               }
@@ -49,7 +51,7 @@ export default function Proyect() {
           }
           <div className='flex gap-3'>
             {Array.isArray(proyecto.tecnologies) && proyecto.tecnologies.map((item, index) => (
-              <div key={index} className='bg-violet-800 backdrop-opacity-85 p-2 rounded-xl  w'>
+              <div key={index} className='bg-[#252424] backdrop-opacity-85 p-2 rounded-xl  w'>
                 <p >{item}</p>
               </div>
             ))}
@@ -59,13 +61,13 @@ export default function Proyect() {
               {proyecto.links && proyecto.links.map((link, index) => {
                 if (link.name === "Github") {
                   return (
-                    <a key={index} href={link.url} target="_blank" className='bg-black text-white backdrop-opacity-85 p-2 rounded-xl  flex items-center justify-center '>
+                    <a key={index} href={link.url} target="_blank" className='bg-black text-white backdrop-opacity-85 p-2 rounded-xl  flex items-center justify-center hover:scale-105 transition ease-in-out '>
                        <Image src={link.img} width={30} height={30} alt={link.name} />
                     </a>
                   )
                 } else if (link.name === "Demo") {
                   return(
-                    <a key={index} href={link.url} target='_blank' className='bg-violet-500 text-white backdrop-opacity-85 p-2 rounded-xl  w-[200px] h-[50px] flex items-center justify-center '>Coliseum <Image src={link.img} width={30} height={30} alt={link.name}/></a>
+                    <a key={index} href={link.url} target='_blank' className='bg-gradient-to-r from-violet-600 via-blue-500 to-green-500 text-white backdrop-opacity-85 p-[1.5px] rounded-xl  w-[200px] h-[50px] flex items-center justify-center hover:scale-105 hover:text-green-400 transition ease-in-out '><div className='flex bg-[#252424] w-full h-full rounded-xl justify-center items-center'>{proyecto.name} <Image src={link.img} width={30} height={30} alt={link.name}/></div> </a>
                   )
                 }
                 return null; // Add this to handle other cases
