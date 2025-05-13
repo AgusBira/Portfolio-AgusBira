@@ -20,7 +20,6 @@ export default function Proyect() {
     const proyectoFiltrado = data.find((item) => item.slug === proyect)
     setProyecto(proyectoFiltrado)
   }, [])
-  console.log(proyecto.links)
   return (
     <section className='m-5 flex flex-col lg:flex-row justify-center items-center gap-10 text-white  min-h-screen'>
       <article>
@@ -32,7 +31,7 @@ export default function Proyect() {
               </div>
             ))}
           </div>
-        <div className='p-5 m-10 w-screen lg:max-w-[500px] text-center lg:text-start'>
+        <div className=' p-1 lg:max-w-[500px] text-center lg:text-start'>
           {
             Array.isArray(proyecto.longDescription) && proyecto.longDescription.map((item, index) => {
               if (item.style === "normal") {
@@ -71,14 +70,14 @@ export default function Proyect() {
                     <a key={index} href={link.url} target='_blank' className='bg-gradient-to-r from-violet-600 via-blue-500 to-green-500 text-white backdrop-opacity-85 p-[1.5px] rounded-xl  w-[200px] h-[50px] flex items-center justify-center hover:scale-105 hover:text-green-400 transition ease-in-out '><div className='flex bg-[#252424] w-full h-full rounded-xl justify-center items-center'>{proyecto.name} <Image src={link.img} width={30} height={30} alt={link.name}/></div> </a>
                   )
                 }
-                return null; // Add this to handle other cases
+                return null;
               })}
             </div>
       </article>
-      {proyect.images && (
+
           <article className='text-black'>
-        <Carousel
-          className="w-full max-w-2xl" // Aumenté el max-width a max-w-4xl (56rem aprox)
+            {proyecto.images ? (<Carousel
+          className="w-full max-w-2xl" 
           
         >
           <CarouselContent>
@@ -89,7 +88,7 @@ export default function Proyect() {
                     src={img}
                     width={1200}  
                     height={800}  
-                    className=" object-cover w-full h-[400px]" // Altura fija grande
+                    className=" object-cover w-full h-[400px]" 
                     alt={`Imagen ${index + 1} del proyecto`}
                   />
                 </div>
@@ -98,10 +97,11 @@ export default function Proyect() {
           </CarouselContent>
           <CarouselPrevious className="h-12 w-6" />  
           <CarouselNext className="h-12 w-6" />     
-        </Carousel>
+        </Carousel>) : ""}
+        
 
       </article>
-      )}
+    
     
     </section>
   )

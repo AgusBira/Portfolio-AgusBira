@@ -67,9 +67,9 @@ export default function MainContainer() {
       <Line />
       <section className='flex flex-col lg:flex-row justify-center gap-15 items-center '>
         <Image  data-aos="flip-left" src={"/images/fotoagusbira.png"} width={window.innerWidth < 640  ? 300 : 419} height={431} alt='Linea de separacion' />
-        <div className='flex flex-col items-center gap-5'>
-          <h3 className='text-4xl font-bold'>Hola!! 👋</h3>
-          <p className=' w-[300px] text-center text-2xl opacity-90 lg:text-start lg:w-[552px]'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
+        <div className='flex flex-col  gap-5'>
+          <h3 className='text-4xl font-bold '>Hola!! 👋</h3>
+          <p className=' w-[350px] text-center text-xl opacity-80 lg:text-start lg:w-[552px]'> Soy apasionado por la creación de experiencias web modernas, accesibles y bien diseñadas. Me encanta combinar diseño y código para construir interfaces limpias, funcionales y centradas en el usuario. Estoy buscando oportunidades como desarrollador front-end en proyectos accesibles e inclusivos</p>
           <ButtonComponent props={"Contacto"} link={"#contacto"}/>
         </div>
       </section>    
@@ -88,14 +88,14 @@ export default function MainContainer() {
           </div>
           <div className='flex items-center gap-5'>
             <Image  src={"/images/iconotelefono1.png"} width={52} height={52} alt='icono de contacto'/>
-            <a href="">+54 1122608199</a>
+            <a href="https://api.whatsapp.com/send?phone=541122608199">+54 1122608199</a>
           </div>
           <div className='flex items-center gap-5'>
             <Image src={"/images/iconomail.png"} width={52} height={52} alt='icono de contacto'/>
             <a href="">agusbira398@gmail.com</a>
           </div>
           </article>
-          <ContactForm data-aos="flip-left"/>
+          <ContactForm />
       </section>
       </section>
   )

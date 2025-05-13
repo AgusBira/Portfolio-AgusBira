@@ -49,7 +49,6 @@ export const data = [
         img:"/images/portfolioproyect.png",
         slug: "portfolio",
         tecnologies: ["Next.js","React.js" ,"Tailwind CSS", "Framer Motion","Shadcn UI"],
-
         links: [
             {
                 name: "Demo",
