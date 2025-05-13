@@ -31,7 +31,7 @@ export const timelineEstudios = [
         description: "Especialización en la creación de aplicaciones web completas. Domino tecnologías como HTML5, CSS3, JavaScript, React, Node.js, Express y bases de datos SQL/NoSQL. Experiencia en el desarrollo de interfaces dinámicas, APIs RESTful y soluciones escalables, aplicando buenas prácticas de código, performance y experiencia de usuario. Con habilidades para trabajar en equipo bajo metodologías ágiles y comprometido con el aprendizaje continuo en el desarrollo de software.",
         date: "Julio 2024 - Actualidad",
         icon: "code",
-        tecno: [ "HTML" , "CSS", "JavaScript", "React", "Node.js", "Express"] 
+        tecno: [ "HTML" , "CSS", "SASS" , "JavaScript", "React", "Node.js", "Express","MongoDB"] 
     }
 ]
 export const timelineExp = [
