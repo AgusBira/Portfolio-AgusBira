@@ -22,12 +22,12 @@ export default function SkillsContainer() {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     show: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   };
@@ -38,7 +38,7 @@ export default function SkillsContainer() {
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true }}
       variants={containerVariants}
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
     >
@@ -55,7 +55,7 @@ export default function SkillsContainer() {
             <div className="w-20 h-1 bg-violet-500 mx-auto rounded-full" />
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
+          <div className="grid grid-cols-2 lg:flex lg:flex-wrap justify-center  gap-6 md:gap-8 lg:gap-10">
             {item.images.map((image) => (
               <motion.div
                 key={image.name} // Usa un identificador único de la imagen

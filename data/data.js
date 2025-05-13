@@ -4,7 +4,7 @@ export const data = [
         description: "Coliseum es E-Commerce de Videojuegos es una tienda en línea desarrollada con React.js, diseñada para ofrecer una experiencia fluida y dinámica en la compra de videojuegos.",
         img: "/images/colisumproyect.png",
         slug: "coliseum",
-        tecnologies: ["React.js", "CSS3", "Firebase", "Context API"],
+        tecnologies: ["React.js", "CSS3", "Firebase", "Context API",],
         images:["/images/imagenesColiseum/imagen1.png",
         "/images/imagenesColiseum/imagen2.png",
         "/images/imagenesColiseum/imagen3.png",
@@ -48,10 +48,8 @@ export const data = [
         description:"Este mismo sitio web es uno de mis proyectos, construido con Next.js y taiwlind CSS. ",
         img:"/images/portfolioproyect.png",
         slug: "portfolio",
-        tecnologies: ["Next.js","React.js" ,"Tailwind CSS", "Framer Motion"],
-        images:["/images/imagenesProyecto2/imagen1.png",
-        "/images/imagenesProyecto2/imagen2.png",
-        "/images/imagenesProyecto2/imagen3.png",],
+        tecnologies: ["Next.js","React.js" ,"Tailwind CSS", "Framer Motion","Shadcn UI"],
+
         links: [
             {
                 name: "Demo",

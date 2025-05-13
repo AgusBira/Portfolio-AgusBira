@@ -24,14 +24,21 @@ export default function Proyect() {
   return (
     <section className='m-5 flex flex-col lg:flex-row justify-center items-center gap-10 text-white  min-h-screen'>
       <article>
-        <h1 className={`${righteous.className} text-5xl p-3 text-center lg:text-start lg:text-6xl `}>{proyecto.name}</h1>
-        <div className='m-10 lg:max-w-[500px]'>
+        <h1 className={`${righteous.className} text-5xl p-5 text-center lg:text-start lg:text-6xl `}>{proyecto.name}</h1>
+         <div className='flex flex-wrap justify-center lg:justify-start gap-3 m-5'>
+            {Array.isArray(proyecto.tecnologies) && proyecto.tecnologies.map((item, index) => (
+              <div key={index} className='bg-[#ab33d7]  opacity-85 p-2 rounded-xl  w'>
+                <p >{item}</p>
+              </div>
+            ))}
+          </div>
+        <div className='p-5 m-10 w-screen lg:max-w-[500px] text-center lg:text-start'>
           {
             Array.isArray(proyecto.longDescription) && proyecto.longDescription.map((item, index) => {
               if (item.style === "normal") {
                 return (
 
-                    <p key={index} className='text-2xl my-5'>{item.text}</p>
+                    <p key={index} className='text-xl my-5 opacity-80'>{item.text}</p>
 
                   
                 )
@@ -41,7 +48,7 @@ export default function Proyect() {
                 )
               } else if (item.style === "ul") {
                 return (
-                  <ul className='list-disc list-inside my-5 text-xl' key={index}>
+                  <ul className='list-disc list-inside my-5 text-xl text-start' key={index}>
                     {Array.isArray(item.text) && item?.text.map((li, index) => {
                       return (<li className='pl-5' key={index}>{li}</li>)
                     })}
@@ -49,13 +56,7 @@ export default function Proyect() {
               }
             })
           }
-          <div className='flex gap-3'>
-            {Array.isArray(proyecto.tecnologies) && proyecto.tecnologies.map((item, index) => (
-              <div key={index} className='bg-[#252424] backdrop-opacity-85 p-2 rounded-xl  w'>
-                <p >{item}</p>
-              </div>
-            ))}
-          </div>
+         
         </div>
             <div className='flex justify-center gap-10'>
               {proyecto.links && proyecto.links.map((link, index) => {
@@ -74,7 +75,8 @@ export default function Proyect() {
               })}
             </div>
       </article>
-      <article className='text-black'>
+      {proyect.images && (
+          <article className='text-black'>
         <Carousel
           className="w-full max-w-2xl" // Aumenté el max-width a max-w-4xl (56rem aprox)
           
@@ -87,7 +89,7 @@ export default function Proyect() {
                     src={img}
                     width={1200}  
                     height={800}  
-                    className="rounded-xl object-cover w-full h-[600px]" // Altura fija grande
+                    className=" object-cover w-full h-[400px]" // Altura fija grande
                     alt={`Imagen ${index + 1} del proyecto`}
                   />
                 </div>
@@ -99,6 +101,8 @@ export default function Proyect() {
         </Carousel>
 
       </article>
+      )}
+    
     </section>
   )
 }

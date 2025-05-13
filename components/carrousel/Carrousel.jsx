@@ -17,7 +17,7 @@ export default function Carrousel() {
     ]
 
     const FAST_DURATION = 15
-    const SLOW_DURATION = 60
+    const SLOW_DURATION = 30
 
     const [duration, setDuration] = useState(FAST_DURATION)
     const [ref, { width }] = useMeasure()
@@ -58,7 +58,7 @@ export default function Carrousel() {
     }, [xTranslation, width, duration, rerender, mustFinish])
 
     return (
-        <section className='py-8 overflow-hidden'>
+        <section className='w-screen overflow-hidden'>
             <motion.div 
                 className='left-0 flex gap-10 w-screen ' 
                 ref={ref} 
