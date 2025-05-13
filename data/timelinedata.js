@@ -95,7 +95,7 @@ export const skillsData = [
         
         images: [
             {
-                url: "/images/react.png",
+                url: "/images/React.png",
                 name: "React Js",
     
             },

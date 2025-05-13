@@ -5,10 +5,10 @@ export const data = [
         img: "/images/colisumproyect.png",
         slug: "coliseum",
         tecnologies: ["React.js", "CSS3", "Firebase", "Context API",],
-        images:["/images/imagenesColiseum/imagen1.png",
-        "/images/imagenesColiseum/imagen2.png",
-        "/images/imagenesColiseum/imagen3.png",
-        "/images/imagenesColiseum/imagen4.png",],
+        images:["/images/ImagenesColiseum/imagen1.png",
+        "/images/ImagenesColiseum/imagen2.png",
+        "/images/ImagenesColiseum/imagen3.png",
+        "/images/ImagenesColiseum/imagen4.png",],
         links: [
             {
                 name: "Demo",
