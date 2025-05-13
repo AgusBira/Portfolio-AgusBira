@@ -21,7 +21,7 @@ export default function Proyect() {
     setProyecto(proyectoFiltrado)
   }, [])
   return (
-    <section className='m-5 flex flex-col lg:flex-row justify-center items-center gap-10 text-white  min-h-screen'>
+    <section className='m-5 flex flex-col lg:flex-row justify-center items-center gap-5 text-white  min-h-screen'>
       <article>
         <h1 className={`${righteous.className} text-5xl p-5 text-center lg:text-start lg:text-6xl `}>{proyecto.name}</h1>
          <div className='flex flex-wrap justify-center lg:justify-start gap-3 m-5'>
@@ -77,13 +77,13 @@ export default function Proyect() {
 
           <article className='text-black'>
             {proyecto.images ? (<Carousel
-          className="w-full max-w-2xl" 
+          className="max-w-xl" 
           
         >
           <CarouselContent>
             {Array.isArray(proyecto.images) && proyecto.images.map((img, index) => (
               <CarouselItem key={index}>
-                <div className="p-1">
+                <div >
                   <Image
                     src={img}
                     width={1200}  

@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import ContactForm from '../ContactForm.jsx/ContactForm';
 import Carrousel from '../carrousel/Carrousel';
+
 export const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
@@ -38,7 +39,7 @@ export default function MainContainer() {
   if (!isClient) {
     return (
 
-      <section className='flex flex-col items-center gap-10 m-10 w-[1280px]'>
+      <section className='flex flex-col items-center gap-10 m-10 w-[1280px] min-h-screen'>
         Cargando...
       </section>
     );
