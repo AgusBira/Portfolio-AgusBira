@@ -1,7 +1,7 @@
 import Image from "next/image";
 import MainContainer from "../../components/MainContainer/MainContainer";
-import {Roboto} from "next/font/google"
-const roboto = Roboto({
+import {Poppins} from "next/font/google"
+const roboto = Poppins({
   weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-roboto',

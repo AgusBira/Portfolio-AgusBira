@@ -16,8 +16,8 @@ export default function Carrousel() {
         "/images/css.png",
     ]
 
-    const FAST_DURATION = 15
-    const SLOW_DURATION = 30
+    const FAST_DURATION = window.innerWidth < 640 ?  20 : 40 
+    const SLOW_DURATION = window.innerWidth < 640 ?  30 : 60
 
     const [duration, setDuration] = useState(FAST_DURATION)
     const [ref, { width }] = useMeasure()
@@ -48,7 +48,6 @@ export default function Carrousel() {
                 repeatDelay: 0,
                 
                 onRepeat: () => {
-                    // Reset position before each repeat to avoid jump
                     xTranslation.set(0)
                 }
             })

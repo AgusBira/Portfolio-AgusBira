@@ -48,19 +48,14 @@ export default function SkillsContainer() {
           variants={itemVariants}
           className="flex flex-col items-center gap-8 mb-16 last:mb-0"
         >
-          <div className="text-center mb-8">
-            <h3 className="text-4xl font-bold text-violet-400 mb-2">
-              {item.title}
-            </h3>
-            <div className="w-20 h-1 bg-violet-500 mx-auto rounded-full" />
-          </div>
+
 
           <div className="grid grid-cols-2 lg:flex lg:flex-wrap justify-center  gap-6 md:gap-8 lg:gap-10">
             {item.images.map((image) => (
               <motion.div
-                key={image.name} // Usa un identificador único de la imagen
+                key={image.name} 
                 variants={itemVariants}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.99 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 5 }}
               >

@@ -12,7 +12,7 @@ export default function page() {
     const params = useParams() 
   return (
     <div>
-        <h2 className={`${righteous.className} text-6xl lg:text-7xl m-10 text-center`}>{params.id}</h2>
+        <h2 className={` text-6xl lg:text-7xl m-10 text-center`}>{params.id}</h2>
         <SobreMiContainer slug={params.id} />
     </div>
   )

@@ -85,16 +85,7 @@ export const skillsData = [
                 url: "/images/css.png",
                 name: "CSS3",
 
-            }, , ,
-        ]
-
-    },
-    {
-        id: 2,
-        title: "Frameworks y librerias",
-        
-        images: [
-            {
+            },   {
                 url: "/images/React.png",
                 name: "React Js",
     
@@ -111,21 +102,4 @@ export const skillsData = [
             },
         ]
 
-    },
-    {
-        id: 3,
-        title: "Herramientas",
-        images: [ 
-        {
-            url:"/images/vs.png",
-            name: "VS Code",
-
-        },
-        {
-            url: "/images/figma.png",
-            name: "Figma",
-
-        },]
-
-    }
-]
+    },]

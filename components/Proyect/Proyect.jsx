@@ -23,12 +23,14 @@ export default function Proyect() {
   return (
     <section className='m-5 flex flex-col lg:flex-row justify-center items-center gap-5 text-white  min-h-screen'>
       <article>
-        <h1 className={`${righteous.className} text-5xl p-5 text-center lg:text-start lg:text-6xl `}>{proyecto.name}</h1>
+        <h1 className={`text-5xl  text-center lg:text-start lg:text-6xl `}>{proyecto.name}</h1>
          <div className='flex flex-wrap justify-center lg:justify-start gap-3 m-5'>
             {Array.isArray(proyecto.tecnologies) && proyecto.tecnologies.map((item, index) => (
-              <div key={index} className='bg-[#ab33d7]  opacity-85 p-2 rounded-xl  w'>
-                <p >{item}</p>
-              </div>
+              <div key={index} className="bg-gradient-to-b from-blue-600 to-violet-600 p-[2px] rounded-xl">
+                    <div className='bg-[#252424] p-2 rounded-xl'>
+                      <span>{item}</span>
+                    </div>
+                  </div>
             ))}
           </div>
         <div className=' p-1 lg:max-w-[500px] text-center lg:text-start'>
