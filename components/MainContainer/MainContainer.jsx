@@ -46,12 +46,12 @@ export default function MainContainer() {
 
   return (
   <section className="flex flex-col items-center gap-10 m-10 w-full max-w-screen overflow-x-hidden text-white">
-    <div className='h-[500px] flex flex-col gap-10'>
+    <div className='h-[400px] lg:h-[500px] flex flex-col gap-10'>
         <div className='flex justify-center gap-3 items-center'>
          
           <DisponibleParaTrabajar />
         </div>
-        {window.innerWidth < 640 ? ( <h1 className={` flex flex-col gap-3 text-6xl items-center h-[200px] w-screen `}>
+        {window.innerWidth < 640 ? ( <h1 className={` flex flex-col gap-3 text-6xl font-semibold items-center h-[200px] w-screen `}>
           <div className='flex flex-col items-center'>
             {text.split('\n').map((line, i) => (
               <span key={i}>
@@ -69,7 +69,7 @@ export default function MainContainer() {
           </div>
 
         </h1>}
-        <p className='text-xl text-center opacity-80 italic'>Creando experiencias web fluidas y atractivas</p>
+        <p className='text-xs lg:text-xl text-center opacity-80 italic'>Creando experiencias web fluidas y atractivas</p>
         <ButtonComponent props={"Proyectos"} link={"#proyectos"} />
       </div>
       
